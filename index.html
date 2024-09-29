@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Craze Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cube Craze Challenge</h1>
+        
+        <div class="cubes">
+            <button id="cube1" onclick="selectCube('Cube 1')">Cube 1</button>
+            <button id="cube2" onclick="selectCube('Cube 2')">Cube 2</button>
+            <button id="cube3" onclick="selectCube('Cube 3')">Cube 3</button>
+        </div>
+
+        <div class="cube-container">
+            <div id="cube" class="cube">
+                <!-- Cube sides will display images -->
+                <div class="cube-face cube-face-front"></div>
+                <div class="cube-face cube-face-back"></div>
+                <div class="cube-face cube-face-left"></div>
+                <div class="cube-face cube-face-right"></div>
+                <div class="cube-face cube-face-top"></div>
+                <div class="cube-face cube-face-bottom"></div>
+            </div>
+        </div>
+
+        <div class="results">
+            <h2 id="selectedCube">Selected Cube: None</h2>
+            <button id="rollBtn" onclick="rollCube()" disabled>Roll the Cube</button>
+            <h3>Roll Results:</h3>
+            <div id="resultsImages" class="images-container"></div> <!-- For images -->
+            
+            <!-- Centered wrapper for Download button -->
+            <div class="download-wrapper">
+                <button id="downloadBtn" style="display:none;">Download as PDF</button> <!-- Hidden initially -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
